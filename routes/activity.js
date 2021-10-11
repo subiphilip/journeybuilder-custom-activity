@@ -30,6 +30,7 @@ exports.execute = async (req, res) => {
         },
       },
     ]);
+    logger.info('SFClient Done Save');
   } catch (error) {
     logger.error(error);
   }
