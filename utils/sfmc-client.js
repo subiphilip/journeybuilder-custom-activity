@@ -30,7 +30,14 @@ const saveData = async (externalKey, data) => client.post({
   },
   json: true,
   body: data,
-});
+}).then(response => {
+  // will be delivered with 200, 400, 401, 500, etc status codes
+  // response.body === payload from response
+  // response.res === full response from request client
+  //console.log(response);
+  logger.info(response);
+})
+.catch(err => logger.info('client post error: '+err));
 
 module.exports = {
   client,
