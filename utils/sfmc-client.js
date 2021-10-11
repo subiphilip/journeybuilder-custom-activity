@@ -36,7 +36,7 @@ const saveData = async (externalKey, data) => client.post({
   // response.body === payload from response
   // response.res === full response from request client
   //console.log(response);
-  logger.info('response: '+response);
+  logger.info('response: '+JSON.stringify(response));
 })
 .catch(err => logger.info('client post error: '+err));
 
