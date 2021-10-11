@@ -30,7 +30,8 @@ exports.execute = async (req, res) => {
         },
       },
     ]);
-    logger.info('SFClient Done Save');
+
+    logger.info('SFClient Done Save. id='+id+' SubscriberKey='+data.inArguments[0].contactKey+' text='+data.inArguments[0].Text);
   } catch (error) {
     logger.error(error);
   }
