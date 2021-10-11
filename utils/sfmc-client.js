@@ -1,4 +1,5 @@
 const FuelRest = require('fuel-rest');
+const logger = require('../utils/logger');
 
 const options = {
   auth: {
